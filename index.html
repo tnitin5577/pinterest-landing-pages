@@ -3,107 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitWellness & US Smart Deals Hub</title>
+    <title>FitWellnessBay | Daily Deals, Health & Wealth</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-        body { background-color: #F9F9F7; color: #333; line-height: 1.6; }
-        header { background-color: #fff; padding: 20px 5%; text-align: center; border-bottom: 1px solid #eee; }
-        .logo { font-size: 24px; font-weight: 800; color: #2C423F; letter-spacing: -0.5px; }
-        .subtitle { font-size: 13px; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+        :root {
+            --primary: #1E293B;
+            --accent: #10B981;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #334155;
+            --text-muted: #64748B;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
-        .hero { background: #2C423F; color: white; text-align: center; padding: 50px 20px; }
-        .hero h1 { font-size: 32px; margin-bottom: 15px; }
-        .hero p { font-size: 16px; color: #D4E4D7; max-width: 600px; margin: 0 auto; }
+        /* Modern Gradient Header */
+        header { background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); padding: 60px 20px 40px; text-align: center; color: white; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .logo-circle { width: 80px; height: 80px; background: linear-gradient(135deg, #10B981, #34D399); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin: 0 auto 15px; color: white; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); border: 3px solid rgba(255,255,255,0.2); }
+        header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 5px; }
+        header p { font-size: 15px; color: #94A3B8; max-width: 400px; margin: 0 auto; }
 
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .section-title { font-size: 22px; font-weight: bold; margin-bottom: 25px; border-bottom: 2px solid #D4E4D7; padding-bottom: 10px; color: #2C423F; }
+        .container { max-width: 800px; margin: -20px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .section-tag { display: inline-block; background: #E2E8F0; color: #475569; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 15px; }
+
+        /* Premium Glassmorphism Cards */
+        .card { background: var(--card-bg); border-radius: 16px; padding: 20px; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; color: inherit; }
+        .card:hover { transform: translateY(-3px) scale(1.01); box-shadow: 0 12px 25px rgba(0,0,0,0.06); }
         
-        .card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); text-align: center; border: 1px solid #f0f0f0; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .card-icon { font-size: 40px; margin-bottom: 15px; }
-        .card h3 { font-size: 18px; margin-bottom: 10px; color: #111; }
-        .card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+        .card-content { display: flex; align-items: center; gap: 15px; }
+        .icon-box { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
         
-        .btn { display: inline-block; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-decoration: none; width: 100%; }
-        .btn-green { background: #00D632; color: #fff; }
-        .btn-blue { background: #0071CE; color: #fff; }
-        .btn-orange { background: #F26122; color: #fff; }
-        .btn-dark { background: #2C423F; color: #fff; }
+        /* Icon Colors */
+        .bg-green { background: #DCFCE7; color: #16A34A; }
+        .bg-blue { background: #DBEAFE; color: #2563EB; }
+        .bg-orange { background: #FFEDD5; color: #EA580C; }
+        .bg-dark { background: #F1F5F9; color: #0F172A; }
+        .bg-purple { background: #F3E8FF; color: #9333EA; }
+
+        .card-text h3 { font-size: 16px; font-weight: 700; color: #0F172A; margin-bottom: 3px; }
+        .card-text p { font-size: 13px; color: var(--text-muted); line-height: 1.3; }
         
-        footer { background: #fff; text-align: center; padding: 30px 20px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
-        footer a { color: #888; margin: 0 10px; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+        .arrow { color: #CBD5E1; font-weight: bold; font-size: 20px; transition: 0.3s; }
+        .card:hover .arrow { color: var(--accent); transform: translateX(3px); }
+
+        /* Highlighted Banner Card */
+        .hero-card { background: linear-gradient(135deg, #10B981, #059669); color: white; border: none; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3); }
+        .hero-card .card-text h3, .hero-card .card-text p { color: white; }
+        .hero-card .icon-box { background: rgba(255,255,255,0.2); color: white; }
+        .hero-card .arrow { color: white; }
+
+        footer { text-align: center; padding: 40px 20px; color: #94A3B8; font-size: 12px; }
+        footer a { color: #64748B; text-decoration: none; margin: 0 8px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">FitWellnessBay</div>
-        <div class="subtitle">Smart Shopping • Healthy Living • Daily Rewards</div>
+        <div class="logo-circle">FW</div>
+        <h1>FitWellnessBay</h1>
+        <p>Curated US Deals, Aesthetic Health Guides & Passive Income Tools.</p>
     </header>
 
-    <div class="hero">
-        <h1>Live Better. Spend Smarter.</h1>
-        <p>Your daily hub for verified US promotional drops, cashback vaults, and low-carb wellness plans.</p>
-    </div>
-
     <div class="container">
-        
-        <!-- DEALS SECTION -->
-        <h2 class="section-title">🔥 Trending US Rewards & Gift Cards (Updated Today)</h2>
-        <div class="grid">
-            
-            <!-- Cash App Card (Links to Bridge Page) -->
-            <div class="card">
-                <div class="card-icon">💸</div>
-                <h3>$750 Cash App Transfer</h3>
-                <p>Verify your US zip code to claim today's promotional Cash App transfer. Limited daily slots available.</p>
-                <a href="cashapp.html" class="btn btn-green">Check Eligibility ➔</a>
-            </div>
 
-            <!-- Walmart Card (Direct CPA Link) -->
-            <div class="card">
-                <div class="card-icon">🛒</div>
-                <h3>$1,000 Walmart Gift Card</h3>
-                <p>Stock up on groceries and essentials. Enter your details to see if you qualify for the Walmart shopper reward.</p>
-                <a href="https://singingfiles.com/show.php?l=0&u=2517611&id=74764" class="btn btn-blue">Claim Walmart Reward ➔</a>
-            </div>
-
-            <!-- Ulta Beauty Card (Direct CPA Link) -->
-            <div class="card">
-                <div class="card-icon">💄</div>
-                <h3>$500 Ulta Beauty Card</h3>
-                <p>Refresh your beauty routine! Participate in today's Ulta Beauty promotional drop for verified shoppers.</p>
-                <a href="https://singingfiles.com/show.php?l=0&u=2517611&id=74437" class="btn btn-orange">Claim Ulta Reward ➔</a>
-            </div>
-            
-        </div>
-
-        <!-- HEALTH & WELLNESS SECTION -->
-        <h2 class="section-title">🥑 Health & Low-Carb Living</h2>
-        <div class="grid">
-            
-            <!-- Custom Keto Diet Card -->
-            <div class="card" style="grid-column: 1 / -1; display: flex; align-items: center; text-align: left; gap: 20px;">
-                <div style="flex: 1;">
-                    <h3 style="font-size: 22px;">The Custom Keto Diet Protocol</h3>
-                    <p style="font-size: 15px;">Stop guessing your macros. Take this quick 60-second quiz to generate a personalized 8-week low-carb meal plan tailored to your specific body type, age, and food preferences.</p>
-                    <!-- YAHAN DIGISTORE24 KA AFFILIATE LINK AAYEGA -->
-                    <a href="YAHAN_APNA_DIGISTORE_LINK_DAALO" class="btn btn-dark" style="width: auto;">Take The Free Keto Quiz ➔</a>
+        <!-- HEALTH & KETO SECTION -->
+        <div class="section-tag">🥑 Health & Diet</div>
+        <a href="YAHAN_APNA_DIGISTORE_LINK_DAALO" class="card hero-card">
+            <div class="card-content">
+                <div class="icon-box">🧠</div>
+                <div class="card-text">
+                    <h3>Custom Keto Diet Quiz</h3>
+                    <p>Generate your personalized 8-week fat loss plan.</p>
                 </div>
             </div>
+            <div class="arrow">➔</div>
+        </a>
 
-        </div>
+        <!-- DAILY REWARDS SECTION -->
+        <div class="section-tag">🎁 Exclusive US Rewards</div>
+        
+        <a href="cashapp.html" class="card">
+            <div class="card-content">
+                <div class="icon-box bg-green">💸</div>
+                <div class="card-text">
+                    <h3>$750 Cash App Transfer</h3>
+                    <p>Verify US eligibility to claim today's drop.</p>
+                </div>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+
+        <a href="https://fitwellnessbay.com/=deals/nike-100.html" class="card">
+            <div class="card-content">
+                <div class="icon-box bg-dark">👟</div>
+                <div class="card-text">
+                    <h3>$100 Nike Gift Card</h3>
+                    <p>Upgrade your sneakers. Check availability.</p>
+                </div>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+
+        <a href="https://singingfiles.com/show.php?l=0&u=2517611&id=74764" class="card">
+            <div class="card-content">
+                <div class="icon-box bg-blue">🛒</div>
+                <div class="card-text">
+                    <h3>$1,000 Walmart Shopper Card</h3>
+                    <p>Stock up on groceries and daily essentials.</p>
+                </div>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+
+        <a href="https://singingfiles.com/show.php?l=0&u=2517611&id=74437" class="card">
+            <div class="card-content">
+                <div class="icon-box bg-orange">💄</div>
+                <div class="card-text">
+                    <h3>$500 Ulta Beauty Card</h3>
+                    <p>Refresh your daily beauty & wellness routine.</p>
+                </div>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+
+        <!-- WEALTH & TOOLS SECTION -->
+        <div class="section-tag">🚀 Wealth & AI Tools</div>
+
+        <a href="https://fitwellnessbay.com/=deals/traffic-genius" class="card">
+            <div class="card-content">
+                <div class="icon-box bg-purple">📈</div>
+                <div class="card-text">
+                    <h3>Traffic Genius Masterclass</h3>
+                    <p>Scale your passive income with proven traffic systems.</p>
+                </div>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+
+        <a href="https://fitwellnessbay.com/ai.html" class="card">
+            <div class="card-content">
+                <div class="icon-box bg-dark">🤖</div>
+                <div class="card-text">
+                    <h3>AI Marketing Hub</h3>
+                    <p>Automate your business workflows effortlessly.</p>
+                </div>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 FitWellnessBay. All rights reserved.</p>
-        <div style="margin-top: 10px;">
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Terms of Service</a> | 
+        <p>&copy; 2026 FitWellnessBay Hub. All rights reserved.</p>
+        <div style="margin-top: 15px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
             <a href="#">Affiliate Disclosure</a>
         </div>
     </footer>
