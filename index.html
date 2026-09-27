@@ -1,73 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily US Verified Deals & Freebies</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; padding: 24px 16px; }
-    .container { max-width: 520px; margin: 0 auto; }
-    .header { text-align: center; margin-bottom: 24px; }
-    .badge { display: inline-block; background: #e0f2fe; color: #0369a1; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 99px; margin-bottom: 12px; letter-spacing: 0.5px; }
-    h1 { font-size: 26px; font-weight: 800; line-height: 1.3; margin-bottom: 8px; color: #0f172a; }
-    p.subtitle { font-size: 15px; color: #64748b; }
-    .deal-card { background: #ffffff; border-radius: 16px; padding: 20px; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: transform 0.2s ease; }
-    .deal-card:hover { transform: translateY(-2px); border-color: #cbd5e1; }
-    .deal-info { display: flex; align-items: center; gap: 14px; text-align: left; }
-    .deal-icon { font-size: 32px; min-width: 40px; text-align: center; }
-    .deal-title { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
-    .deal-tag { font-size: 12px; color: #16a34a; font-weight: 600; }
-    .btn { display: inline-block; background: #0284c7; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 10px; white-space: nowrap; transition: background 0.2s; }
-    .btn:hover { background: #0369a1; }
-    .footer { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 32px; line-height: 1.5; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitWellness & US Smart Deals Hub</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        body { background-color: #F9F9F7; color: #333; line-height: 1.6; }
+        header { background-color: #fff; padding: 20px 5%; text-align: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 24px; font-weight: 800; color: #2C423F; letter-spacing: -0.5px; }
+        .subtitle { font-size: 13px; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+        
+        .hero { background: #2C423F; color: white; text-align: center; padding: 50px 20px; }
+        .hero h1 { font-size: 32px; margin-bottom: 15px; }
+        .hero p { font-size: 16px; color: #D4E4D7; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .section-title { font-size: 22px; font-weight: bold; margin-bottom: 25px; border-bottom: 2px solid #D4E4D7; padding-bottom: 10px; color: #2C423F; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        
+        .card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); text-align: center; border: 1px solid #f0f0f0; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-icon { font-size: 40px; margin-bottom: 15px; }
+        .card h3 { font-size: 18px; margin-bottom: 10px; color: #111; }
+        .card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+        
+        .btn { display: inline-block; padding: 12px 24px; border-radius: 6px; font-weight: bold; text-decoration: none; width: 100%; }
+        .btn-green { background: #00D632; color: #fff; }
+        .btn-blue { background: #0071CE; color: #fff; }
+        .btn-orange { background: #F26122; color: #fff; }
+        .btn-dark { background: #2C423F; color: #fff; }
+        
+        footer { background: #fff; text-align: center; padding: 30px 20px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+        footer a { color: #888; margin: 0 10px; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <span class="badge">🇺🇸 100% VERIFIED OFFERS</span>
-      <h1>Daily US Deals Hub</h1>
-      <p class="subtitle">Select an active promotional reward or verified tool below.</p>
+
+    <header>
+        <div class="logo">FitWellnessBay</div>
+        <div class="subtitle">Smart Shopping • Healthy Living • Daily Rewards</div>
+    </header>
+
+    <div class="hero">
+        <h1>Live Better. Spend Smarter.</h1>
+        <p>Your daily hub for verified US promotional drops, cashback vaults, and low-carb wellness plans.</p>
     </div>
 
-    <div class="deal-card">
-      <div class="deal-info">
-        <div class="deal-icon">👟</div>
-        <div>
-          <div class="deal-title">$100 Nike Voucher</div>
-          <div class="deal-tag">● Limited Daily Spots</div>
+    <div class="container">
+        
+        <!-- DEALS SECTION -->
+        <h2 class="section-title">🔥 Trending US Rewards & Gift Cards (Updated Today)</h2>
+        <div class="grid">
+            
+            <!-- Cash App Card (Links to Bridge Page) -->
+            <div class="card">
+                <div class="card-icon">💸</div>
+                <h3>$750 Cash App Transfer</h3>
+                <p>Verify your US zip code to claim today's promotional Cash App transfer. Limited daily slots available.</p>
+                <a href="cashapp.html" class="btn btn-green">Check Eligibility ➔</a>
+            </div>
+
+            <!-- Walmart Card (Direct CPA Link) -->
+            <div class="card">
+                <div class="card-icon">🛒</div>
+                <h3>$1,000 Walmart Gift Card</h3>
+                <p>Stock up on groceries and essentials. Enter your details to see if you qualify for the Walmart shopper reward.</p>
+                <a href="https://singingfiles.com/show.php?l=0&u=2517611&id=74764" class="btn btn-blue">Claim Walmart Reward ➔</a>
+            </div>
+
+            <!-- Ulta Beauty Card (Direct CPA Link) -->
+            <div class="card">
+                <div class="card-icon">💄</div>
+                <h3>$500 Ulta Beauty Card</h3>
+                <p>Refresh your beauty routine! Participate in today's Ulta Beauty promotional drop for verified shoppers.</p>
+                <a href="https://singingfiles.com/show.php?l=0&u=2517611&id=74437" class="btn btn-orange">Claim Ulta Reward ➔</a>
+            </div>
+            
         </div>
-      </div>
-      <a href="https://fitwellnessbay.com/deals/nike.html" class="btn">Claim Now &rarr;</a>
-    </div>
 
-    <div class="deal-card">
-      <div class="deal-info">
-        <div class="deal-icon">🥑</div>
-        <div>
-          <div class="deal-title">KetoFlow AI Coach</div>
-          <div class="deal-tag">● Instant Macro Scanner</div>
+        <!-- HEALTH & WELLNESS SECTION -->
+        <h2 class="section-title">🥑 Health & Low-Carb Living</h2>
+        <div class="grid">
+            
+            <!-- Custom Keto Diet Card -->
+            <div class="card" style="grid-column: 1 / -1; display: flex; align-items: center; text-align: left; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3 style="font-size: 22px;">The Custom Keto Diet Protocol</h3>
+                    <p style="font-size: 15px;">Stop guessing your macros. Take this quick 60-second quiz to generate a personalized 8-week low-carb meal plan tailored to your specific body type, age, and food preferences.</p>
+                    <!-- YAHAN DIGISTORE24 KA AFFILIATE LINK AAYEGA -->
+                    <a href="YAHAN_APNA_DIGISTORE_LINK_DAALO" class="btn btn-dark" style="width: auto;">Take The Free Keto Quiz ➔</a>
+                </div>
+            </div>
+
         </div>
-      </div>
-      <a href="https://fitwellnessbay.com/keto/" class="btn">Try Free &rarr;</a>
+
     </div>
 
-    <div class="deal-card">
-      <div class="deal-info">
-        <div class="deal-icon">📦</div>
-        <div>
-          <div class="deal-title">$50 Amazon Card</div>
-          <div class="deal-tag">● Seasonal Entry</div>
+    <footer>
+        <p>&copy; 2026 FitWellnessBay. All rights reserved.</p>
+        <div style="margin-top: 10px;">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Affiliate Disclosure</a>
         </div>
-      </div>
-      <a href="https://fitwellnessbay.com/deals/amazon.html" class="btn">Claim Now &rarr;</a>
-    </div>
+    </footer>
 
-    <div class="footer">
-      Official Promotional Partner Portal • Secure Verification<br>
-      © 2026 Daily US Deals Hub. All rights reserved.
-    </div>
-  </div>
 </body>
 </html>
