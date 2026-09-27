@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified US Reward: $750 Cash App Transfer</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #f4f6f8; color: #333; text-align: center; }
+        .header { background-color: #00D632; padding: 15px; color: white; font-weight: bold; font-size: 20px; letter-spacing: 1px; }
+        .container { max-width: 500px; margin: 30px auto; background: white; padding: 30px 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .badge { background: #e8f9ed; color: #00D632; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 15px; }
+        h1 { font-size: 24px; margin-bottom: 10px; color: #111; }
+        p { font-size: 15px; color: #666; margin-bottom: 25px; line-height: 1.5; }
+        .quiz-box { border: 2px dashed #eee; padding: 20px; border-radius: 8px; background: #fafafa; }
+        .question { font-size: 18px; font-weight: bold; margin-bottom: 20px; }
+        .btn { display: block; width: 100%; padding: 16px; margin-bottom: 15px; background-color: #00D632; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.2s; text-decoration: none; }
+        .btn:hover { background-color: #00b82b; }
+        .footer { font-size: 11px; color: #aaa; margin-top: 30px; padding: 20px; }
+        #step2, #step3, #final { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="header">💰 Reward Center US</div>
+
+    <div class="container">
+        <div class="badge">STATUS: ACTIVE IN YOUR REGION</div>
+        <h1>$750 Cash App Transfer</h1>
+        <p>Complete the quick verification below to see if you qualify for today's $750 Cash App drop.</p>
+
+        <div class="quiz-box">
+            <!-- Step 1 -->
+            <div id="step1">
+                <div class="question">Question 1/3: Are you currently in the United States?</div>
+                <button class="btn" onclick="nextStep(2)">Yes, I am in the US</button>
+                <button class="btn" onclick="nextStep(2)">No</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div id="step2">
+                <div class="question">Question 2/3: How do you plan to use the $750?</div>
+                <button class="btn" onclick="nextStep(3)">Pay Bills / Groceries</button>
+                <button class="btn" onclick="nextStep(3)">Shopping / Entertainment</button>
+                <button class="btn" onclick="nextStep(3)">Save It</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div id="step3">
+                <div class="question">Question 3/3: What is your primary device?</div>
+                <button class="btn" onclick="showFinal()">iPhone / iOS</button>
+                <button class="btn" onclick="showFinal()">Android</button>
+            </div>
+
+            <!-- Final Step -->
+            <div id="final">
+                <div class="question">🎉 Congratulations! You Pre-Qualify!</div>
+                <p style="color:#00D632; font-weight:bold;">Tap the button below to claim your $750 Cash App reward before the timer expires.</p>
+                <!-- Direct CPA Link Inserted Here -->
+                <a href="https://singingfiles.com/show.php?l=0&u=2517611&id=75222" class="btn" style="background-color: #000; color: #00D632;">CLAIM $750 NOW ➔</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 FitWellness & Deals. This is a promotional offer. We are not affiliated with Cash App. Terms and conditions apply.
+    </div>
+
+    <script>
+        function nextStep(step) {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('step' + step).style.display = 'block';
+        }
+        function showFinal() {
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('final').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
