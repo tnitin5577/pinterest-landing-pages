@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | FitWellnessBay</title>
+  <meta name="description" content="Terms of Service and legal conditions for using FitWellnessBay.com resources, digital products, and links.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #080B11;
+      --bg-card: rgba(18, 24, 38, 0.7);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --primary-emerald: #10B981;
+      --primary-cyan: #06B6D4;
+      --text-white: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-subtle: #64748B;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -100px;
+      left: 15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+      filter: blur(80px);
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(8, 11, 17, 0.85);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 16px 0;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-white);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, var(--primary-emerald), var(--primary-cyan));
+      color: #041014;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 4px 9px;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-back {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .btn-back:hover {
+      color: var(--primary-emerald);
+    }
+
+    .legal-wrapper {
+      padding: 60px 0 80px;
+    }
+
+    .legal-badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34D399;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .last-updated {
+      color: var(--text-subtle);
+      font-size: 0.88rem;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 20px;
+    }
+
+    .legal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      color: var(--text-muted);
+      margin-left: 20px;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-white);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 36px 0;
+      background: rgba(6, 9, 14, 0.95);
+      color: var(--text-subtle);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: var(--text-white);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">
+        <span class="brand-badge">FW</span>
+        FitWellnessBay
+      </a>
+      <a href="/" class="btn-back">&larr; Return to Home</a>
+    </div>
+  </header>
+
+  <main class="container legal-wrapper">
+    <span class="legal-badge">Legal Documentation</span>
+    <h1>Terms of Service</h1>
+    <div class="last-updated">Last Updated: November 2026</div>
+
+    <div class="legal-card">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing or using <strong>FitWellnessBay.com</strong> (the "Website"), you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our site or download our digital assets.</p>
+
+      <h2>2. Nature of Service & Digital Products</h2>
+      <p>FitWellnessBay provides educational content, digital asset templates, productivity blueprints, keto lifestyle resources, and links to verified external tools and software programs. All digital downloads (including PDF playbooks, Notion templates, and spreadsheet calculators) are provided for personal educational and commercial implementation purposes as specified in the product packaging.</p>
+
+      <h2>3. Intellectual Property Rights</h2>
+      <p>All original content, graphics, layouts, and proprietary guides published on this Website are the intellectual property of FitWellnessBay. You may not resell, redistribute, or publicly re-license our downloadable PDF guides or blueprints in their unmodified raw form without explicit authorization.</p>
+
+      <h2>4. Affiliate & Third-Party Software Disclosures</h2>
+      <p>Our website contains links to third-party tools, affiliate partners (such as ElevenLabs, Submagic, Systeme.io, Carrd, Webshare, ScraperAPI), and promotional rewards. FitWellnessBay is not responsible for the performance, terms, privacy practices, or subscription billing of external platforms. Any software purchase or trial initiated through an external link is subject to that platform's independent terms of service.</p>
+
+      <h2>5. Educational & Financial Disclaimer</h2>
+      <p>The business blueprints, AI prompt systems, and digital asset workflows provided on this platform reflect strategic methodologies and case studies. FitWellnessBay makes no guarantee of specific financial results, income figures, or viral reach. Success depends upon individual technical execution, market testing, and audience demand.</p>
+
+      <h2>6. Health & Wellness Disclaimer</h2>
+      <p>Information provided in connection with the 7-Day Custom Keto Meal Plan or other dietary resources is published strictly for informational and educational purposes. FitWellnessBay does not provide medical diagnosis, treatment, or individualized medical prescriptions. Always consult a certified physician or healthcare professional before making significant nutritional or lifestyle changes.</p>
+
+      <h2>7. Modifications to Service & Terms</h2>
+      <p>We reserve the right to modify, suspend, or update any part of our Website or these Terms of Service at any time without prior notice. Continued use of the Website following any changes constitutes acceptance of the revised terms.</p>
+
+      <h2>8. Contact Information</h2>
+      <p>For questions or editorial inquiries regarding these Terms of Service, please contact us at: <strong>contact@fitwellnessbay.com</strong></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 FitWellnessBay. All rights reserved.</p>
+      <p style="margin-top: 10px;">
+        <a href="/">Home</a> | 
+        <a href="/terms.html">Terms of Service</a> | 
+        <a href="/privacy.html">Privacy Policy</a> | 
+        <a href="/disclosure.html">Affiliate Disclosure</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
